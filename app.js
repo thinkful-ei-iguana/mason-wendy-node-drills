@@ -4,7 +4,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
-app.use(morgan("common"));
+app.use(morgan("dev"));
 
 // app.get("/queryViewer", (req, res) => {
 //   const a = parseFloat(req.query.a);
@@ -128,3 +128,4 @@ app.listen(8000, () => {
 });
 
 //so i followed the solution exactly and i still cannot figure out how to work it
+// this is what i tried using in URL = http://localhost:8000/lotto?n=3&n=4&n=9&n=12&n=16&n=19
