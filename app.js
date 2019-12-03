@@ -6,7 +6,7 @@ const morgan = require("morgan");
 const app = express();
 app.use(morgan("dev"));
 
-// app.get("/queryViewer", (req, res) => {
+// app.get("/sum", (req, res) => {
 //   const a = parseFloat(req.query.a);
 //   const b = parseFloat(req.query.b);
 //   const c = parseFloat(a + b);
@@ -113,13 +113,13 @@ app.get('/lotto', (req, res) => {
  
   // uncomment below to see how the results ran
  
-  // res.json({
-  //   guesses,
-  //   winningNumbers,
-  //   diff,
-  //   responseText
-  // });
- 
+  res.json({
+    guesses,
+    winningNumbers,
+    diff,
+    responseText
+  });
+  console.log(res.json);
   res.send(responseText);
 });
  
@@ -127,5 +127,4 @@ app.listen(8000, () => {
   console.log('Server started on PORT 8000');
 });
 
-//so i followed the solution exactly and i still cannot figure out how to work it
-// this is what i tried using in URL = http://localhost:8000/lotto?n=3&n=4&n=9&n=12&n=16&n=19
+//you can use this to test it, URL: http://localhost:8000/lotto?numbers=3&numbers=5&numbers=9&numbers=15&numbers=17&numbers=19
