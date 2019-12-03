@@ -8,10 +8,9 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "skipFiles": [
-        "<node_internals>/**"
-      ],
-      "program": "${workspaceFolder}\\index.js"
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\app.js",
+      "args": ["3,6,9,12,15,18"]
     }
   ]
 }
